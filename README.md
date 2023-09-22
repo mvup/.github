@@ -1,7 +1,9 @@
 # Universal Coordination
 
 This repository details the basic structure of the organization as well as code administration
-details for GitHub activity.
+details for the hosted git platform (currently GitHub, but it may change in the future). The
+following includes links to each relevant template, a list of labels, and default workflows that
+should be installed in all repositories.
 
 ## License
 
@@ -32,16 +34,19 @@ linters that are specified in the repository and should follow the default
 
 ## Reviewing Guidelines
 
-...
+When reviewing, ensure that you follow the rules layed out in the `CONTRIBUTING.md` document in the
+corresponding repository. Generally, each repository will have Issue and Pull Request templates that
+must be followed for valid contribution.
 
 ## Labels
 
 Labels come in a few different forms:
 
-- Category
-- Dependency
+- Category (`C-`): describes the type of Issue or Pull Request
+- Status (`S-`): describes the status of a new feature Issue
+- Dependency (`D-`): describes Pull Requests that involve updating a certain dependency
 
-The following are the labels present in the global namespace and should be used by repositories:
+The following are the labels present in the global namespace and should be used by all repositories:
 
 | Type       | Name                 |
 |:----------:|:--------------------:|
@@ -52,9 +57,11 @@ The following are the labels present in the global namespace and should be used 
 |            | `C-experiment`       |
 |            | `C-good-first-issue` |
 |            | `C-help-wanted`      |
+|            | `C-proposal`         |
 |            | `C-stale`            |
 |            | `C-tracking-issue`   |
-|            | `C-wontfix`          |
+| Status     | `S-proposed`         |
+|            | `S-accepted`         |
 | Dependency | `D-cargo`            |
 |            | `D-docker`           |
 |            | `D-github-actions`   |
@@ -62,7 +69,20 @@ The following are the labels present in the global namespace and should be used 
 |            | `D-gomod`            |
 |            | `D-npm`              |
 
+Repositories may use their own custom labels as well, but they should be clearly documented in the
+development documentation (the `CONTRIBUTING.md` file) for that repository.
+
 ## Default Workflows
 
-...
+This repository includes default workflows for release automation and `CHANGELOG.md` validation as
+well as workflows for the common programming languages used by repositories in this organization.
+
+### Release Automation
+
+Certain Pull Requests can be tagged as _Release Pull Requests_ which the release workflow can detect
+causing a tag creation and publication of a release with `CHANGELOG.md` validation. These kinds of
+releases only mark a point in the history of the repository, they do not automatically cause
+production code to be released. Production releases are still done manually using the relevant
+authentication mode for each production platform. There may be exceptions to this process, and they
+are clearly documented in those cases.
 

@@ -7,3 +7,6 @@ d88' d88'  88b`?888P'  `?88P'?8b  888888P'
                                  d88
                                  ?8P
 ```
+a platform for creating truly unstoppable applications. made of both hardware and software. the
+entire stack is owned by its users. it is a frame of mind. a way of being.
+
