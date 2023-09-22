@@ -1,0 +1,33 @@
+version: 2
+updates:
+  - package-ecosystem: "cargo"
+    directory: "/"
+    labels: ["D-cargo"]
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/"
+    labels: ["D-docker"]
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    labels: ["D-github-actions"]
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"
+    labels: ["D-gitsubmodule"]
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "gomod"
+    directory: "/"
+    labels: ["D-gomod"]
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "npm"
+    directory: "/"
+    labels: ["D-npm"]
+    schedule:
+      interval: "daily"
+
